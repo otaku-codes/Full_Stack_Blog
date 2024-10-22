@@ -3,7 +3,5 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-ARG MONGO_URL
-ENV MONGO_URL=$MONGO_URL
 EXPOSE 3000
 CMD ["node", "app.js"]
